@@ -62,7 +62,7 @@ const Blogs = () => {
                   <Link
                     to={`/blog/${blog.id}`}
                     state={blog}
-                    className="text-blue-600 hover:text-blue-800 font-medium transition"
+                    className="text-green-500 hover:text-green-600 font-medium transition"
                   >
                     Read More →
                   </Link>

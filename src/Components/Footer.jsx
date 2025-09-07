@@ -1,4 +1,3 @@
-
 import { Mail, Phone, Clock, MapPin, ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -54,18 +53,30 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-3">
-            {["About Us", "Contact Us", "Blog", "FAQ's", "Career"].map(
-              (link, i) => (
-                <li key={i}>
-                  <a
-                    href="#"
-                    className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
-                  >
-                    {link}
-                  </a>
-                </li>
-              )
-            )}
+            <li>
+              <a
+                href="/"
+                className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
+              >
+                Contact Us
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -75,21 +86,22 @@ const Footer = () => {
             Company
           </h3>
           <ul className="space-y-3">
-            {[
-              "Terms & Condition",
-              "Privacy Policy",
-              "Calculate Mortgage",
-              "History & Fidelity",
-            ].map((item, i) => (
-              <li key={i}>
-                <a
-                  href="#"
-                  className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="/blog"
+                className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
+              >
+                Blogs
+              </a>
+            </li>
+            <li>
+              <a
+                href="/blog/1"
+                className="text-footer-text hover:text-footer-link-hover transition-colors text-sm"
+              >
+                Blog Details
+              </a>
+            </li>
           </ul>
         </div>
 
