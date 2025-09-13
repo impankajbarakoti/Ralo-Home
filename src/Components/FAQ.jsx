@@ -173,23 +173,24 @@ const FAQ = () => {
                 className="bg-green-900 bg-opacity-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl cursor-default"
               >
                 {/* Question */}
-                <div className="flex justify-between items-center">
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  aria-expanded={isOpen}
+                  aria-label={isOpen ? "Collapse answer" : "Expand answer"}
+                >
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
                     {item.question}
                   </h3>
 
-                  <motion.button
-                    onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="text-3xl sm:text-4xl font-extrabold text-green-400"
-                    aria-expanded={isOpen}
-                    aria-label={isOpen ? "Collapse answer" : "Expand answer"}
+                  <motion.span
+                    className="text-3xl sm:text-4xl font-extrabold text-green-400 select-none"
                     initial={false}
                     animate={{ rotate: isOpen ? 90 : 0 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    whileTap={{ scale: 0.9 }}
                   >
                     →
-                  </motion.button>
+                  </motion.span>
                 </div>
 
                 {/* Answer */}
@@ -202,7 +203,7 @@ const FAQ = () => {
                       exit={{ opacity: 0, height: 0, y: 10 }}
                       transition={{ duration: 0.4, ease: "easeInOut" }}
                       className="mt-3 sm:mt-5 overflow-hidden text-green-200 text-sm sm:text-base md:text-lg leading-relaxed"
-                    >
+                    >-
                       <p className="whitespace-pre-wrap">
                         {typedAnswer}
                         <motion.span
